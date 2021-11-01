@@ -8,11 +8,13 @@ from prac_06.car import Car
 class Taxi(Car):
     """Specialised version of a Car that includes fare costs."""
     price_per_km = 1.23
+    flagfall=None
 
-    def __init__(self,name,fuel):
+    def __init__(self,name,fuel,fanciness = None):
         """Initialise a Taxi instance, based on parent class Car."""
         super().__init__(name,fuel)
         self.current_fare_distance = 0
+        self.fanciness=fanciness
 
     def __str__(self):
         """Return a string like a Car but with current fare distance."""
